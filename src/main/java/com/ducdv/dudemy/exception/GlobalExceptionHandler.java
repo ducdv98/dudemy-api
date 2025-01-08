@@ -1,5 +1,8 @@
 package com.ducdv.dudemy.exception;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.buffer.DataBuffer;
@@ -61,8 +64,9 @@ public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
         }
     }
 
-    @lombok.Data
-    @lombok.AllArgsConstructor
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
     private static class ErrorResponse {
         private int status;
         private String message;
