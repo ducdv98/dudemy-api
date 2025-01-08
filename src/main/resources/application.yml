@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dudemy
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/dudemy
+    username: postgres
+    password: root
+    pool:
+      initial-size: 5
+      max-size: 20
+      max-idle-time: 30m
